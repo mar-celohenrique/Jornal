@@ -1,0 +1,133 @@
+
+<!-- ADAMSKI!!! -->
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TESTE HOME PAGE NEWS</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- for fontawesome icon css file -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+
+<!-- for content animate css file -->
+<link rel="stylesheet" href="css/animate.css">
+<link href='http://fonts.googleapis.com/css?family=Varela'
+	rel='stylesheet' type='text/css'>
+<!-- main site css file -->
+<link href="structure.css" rel="stylesheet">
+
+
+</head>
+<body>
+	<!-- cabeçalho e menu -->
+
+
+	<div class="container">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+						<span class="sr-only">Menu suspenso</span> <span class="icon-bar"></span>
+						<span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><span>UFC</span> Post</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav custom_nav">
+						<li class=""><a href="#">Cadastre-se</a></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-expanded="false">Login</a>
+				</div>
+			</div>
+		</nav>
+
+	</div>
+	</header>
+	<section id="contentbody">
+
+		<div class="container">
+			<div class="row">
+				<!-- start left bar content -->
+				<div class=" col-sm-12 col-md-8 col-lg-8">
+					<div class="row">
+						<div class="leftbar_content">
+							<h2>Novidades</h2>
+
+							<!-- NOTICIA PRINCIPAL -->
+							<div class="singlepost_area">
+								<div class="singlepost_content">
+									<a class="stuff_category">${n.idSecao}</a>
+									<h2>
+										<a>${n.titulo}</a>
+									</h2>
+									<h4>${n.subtitulo}</h4>
+									<img alt="${n.titulo}" class="img-center" src="<c:url value=" /resources/images/${n.titulo}"  />"
+									/><br />
+									<p>${n.texto}</p>
+
+									<!-- COLA AQUI O LANCE DOS COMENTÁRIOS EM JAVASCRIPT-->
+									<script>
+										(function(d, s, id) {
+											var js, fjs = d
+													.getElementsByTagName(s)[0];
+											if (d.getElementById(id))
+												return;
+											js = d.createElement(s);
+											js.id = id;
+											js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1632928703594461";
+											fjs.parentNode
+													.insertBefore(js, fjs);
+										}(document, 'script', 'facebook-jssdk'));
+									</script>
+
+									<div class="fb-comments"
+										data-href="http://localhost:8080/JornalFinal/visualizarNoticia?id=${n.idNoticia}"
+										data-numposts="4" data-order-by="time"
+										data-include-parent="true" data-width="500"></div>
+
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		</div>
+		</div>
+		</div>
+	</section>
+	<!-- Começa o rodapé -->
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="footer_inner">
+						<p class="pull-left">UFC Direitos Reservados</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- termina o rodapé -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- content animation file -->
+	<script src="js/wow.min.js"></script>
+	<!-- custom js file include -->
+	<script src="js/custom.js"></script>
+</body>
+</html>
